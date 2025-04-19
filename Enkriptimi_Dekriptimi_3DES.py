@@ -1,16 +1,21 @@
 from Crypto.Cipher import DES3
-from Crypto.Random import get_random_bytes
-from Crypto.Util.Padding import pad, unpad
+import base64
 
-plaintext = input("Shkruaj tekstin që dëshiron të enkriptosh: ")
-
-key = DES3.adjust_key_parity(get_random_bytes(24))
-
-iv = get_random_bytes(8)
-
-cipher_encrypt = DES3.new(key, DES3.MODE_CBC, iv)
+key = b'0123456789abcdef'
 
 
-ciphertext = cipher_encrypt.encrypt(pad(plaintext.encode(), DES3.block_size))
+def encrypt_text(plain_text):
+    encrypted_text = ''
+    cipher = DES3.new(key, DES3.MODE_ECB)
 
-print("\nTeksti i enkriptuar (hex):", ciphertext.hex())
+    # Padding për shumëfish të 8 bytes
+    while len(plain_text) % 8 != 0:
+        plain_text += '\0'
+
+    encrypted_bytes = cipher.encrypt(plain_text.encode('utf-8'))
+    encrypted_text = base64.b64encode(encrypted_bytes).decode('utf-8')
+    return encrypted_text;
+
+
+
+
