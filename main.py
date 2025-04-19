@@ -1,7 +1,8 @@
 from dekriptimiTekstit import decrypt_text
 from enkriptimiTekstit import encrypt_text
 
-key = b'0123456789abcdef' #Celesi universal qe do perdorim si shembull
+key = b'0123456789abcdef'  # Celesi universal qe do perdorim si shembull
+
 while True:
     prgj = input("Deshironi te enkriptoni(e) apo dekriptoni(d)?\n")
 
@@ -17,3 +18,4 @@ while True:
         break;
     else:
         print("Ju lutem jepni pergjigje valide (e ose d)\n")
+
