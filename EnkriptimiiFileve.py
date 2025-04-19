@@ -9,5 +9,10 @@ output_file = input_file + ".enc"
 key = b'1234567890abcdef12345678'
 iv = os.urandom(8)
 
-
 cipher_encrypt = DES3.new(key, DES3.MODE_CBC, iv)
+
+with open(input_file, 'rb') as file:
+    file_data = file.read()
+
+while len(file_data) % 8 != 0:
+    file_data += b'\x00'
