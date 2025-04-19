@@ -5,7 +5,7 @@ import os
 def enkripto():
 
     input_file = input("Shkruaj emrin e fajllit që dëshiron të enkriptosh: ")
-    output_file = input_file + ".encrypted"
+    output_file = input_file + ".enc"
 
 
     key = b'1234567890abcdef12345678'
