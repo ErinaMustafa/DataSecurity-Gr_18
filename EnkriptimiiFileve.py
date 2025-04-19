@@ -16,3 +16,8 @@ with open(input_file, 'rb') as file:
 
 while len(file_data) % 8 != 0:
     file_data += b'\x00'
+
+ciphertext = cipher_encrypt.encrypt(file_data)
+
+
+iv_and_cipher = iv + ciphertext
