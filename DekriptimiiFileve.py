@@ -21,6 +21,6 @@ def dekripto():
     with open(output_file, 'wb') as dec_file:
         dec_file.write(decrypted_data)
 
-    print(f"Fajlli u dekriptua me sukses dhe u ruajt si: {output_file}")
+    print(f" Fajlli u dekriptua me sukses dhe u ruajt si: {output_file}")
 
 
