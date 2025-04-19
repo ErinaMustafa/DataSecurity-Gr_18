@@ -1,4 +1,4 @@
-from dekriptimiFileve import decrypt_text
+from dekriptimiTekstit import decrypt_text
 from Enkriptimi_Dekriptimi_3DES import encrypt_text
 
 key = b'0123456789abcdef' #Celesi universal qe do perdorim si shembull
