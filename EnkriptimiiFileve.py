@@ -21,3 +21,12 @@ ciphertext = cipher_encrypt.encrypt(file_data)
 
 
 iv_and_cipher = iv + ciphertext
+
+
+encoded_data = base64.b64encode(iv_and_cipher)
+
+
+with open(output_file, 'wb') as enc_file:
+    enc_file.write(encoded_data)
+
+print(f"Fajlli u enkriptua dhe u ruajt si base64 në: {output_file}")
