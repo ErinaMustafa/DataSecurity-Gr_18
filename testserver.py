@@ -31,3 +31,5 @@ while True:
         print("Derguam 'stop'. Po mbyllim lidhjen...")
         break
 
+conn.close()
+server_socket.close()
