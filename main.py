@@ -18,6 +18,16 @@ while True:
 
         veprimi = input("Zgjedhja juaj: ")
 
+        if veprimi == '1':
+            plain_text = input("Shkruani tekstin për enkriptim:")
+            encrypted = encrypt_text(plain_text)
+            print(" Teksti i enkriptuar: "+encrypted)
+        elif veprimi == '2':
+            encrypted_text = input("Shkruani tekstin e enkriptuar: ")
+            decrypted = decrypt_text(encrypted_text)
+            print(" Teksti i dekriptuar: "+decrypted)
+        else:
+            print(" Zgjedhje e pavlefshme për tekst.")
 
 
     elif tipi == '2':
