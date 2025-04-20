@@ -34,3 +34,8 @@ while True:
         break
     else:
         print("Ju lutem zgjidhni 1, 2 ose 3.")
+        
+        if veprimi == '1':
+            plain_text = input("Shkruani tekstin për enkriptim: ")
+            encrypted = encrypt_text(plain_text)
+            print(" Teksti i enkriptuar: " + encrypted)
