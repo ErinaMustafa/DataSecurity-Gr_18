@@ -1,0 +1,5 @@
+3DES (Triple DES) është një algoritëm kriptimi që e aplikon
+DES-in tri herë për të rritur sigurinë.
+Përdor tri çelësa dhe funksionon me modelin enkripto-dekripto-enkripto (EDE).
+Ka qenë i përdorur gjerësisht në financa, por sot konsiderohet i ngadalshëm dhe
+është zëvendësuar nga algoritme më të sigurta si AES.
