@@ -18,3 +18,12 @@ while True:
         if message.lower() == "stop":
             print("Derguam komandën 'stop'. Po largohemi...")
             break
+            data = client_socket.recv(1024)
+            decrypted_response = decrypt_text(data)
+            print("Pergjigje nga serveri:", decrypted_response)
+
+            if decrypted_response.lower() == "stop":
+                print("Serveri dergoi 'stop'. Po largohemi...")
+                break
+
+        client_socket.close()
