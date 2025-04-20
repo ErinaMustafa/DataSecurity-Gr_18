@@ -9,3 +9,12 @@ while True:
     message = input("Shkruaj mesazhin: ")
     encrypted_message = encrypt_text(message)
     client_socket.send(encrypted_message)
+
+    while True:
+        message = input("Shkruaj mesazhin: ")
+        encrypted_message = encrypt_text(message)
+        client_socket.send(encrypted_message)
+
+        if message.lower() == "stop":
+            print("Derguam komandën 'stop'. Po largohemi...")
+            break
