@@ -13,4 +13,16 @@ server_socket.listen(1)
 #pritja e klientit per tu qasur
 print(f"Serveri duke pritur lidhje ne portin {server_port} ...")
 
+# pranimi i qasjes se klientit
+conn, addr = server_socket.accept()
+print(f"Lidhur nga: {addr}")
 
+# pranimi i mesazhit nga klienti
+while True:
+    data = conn.recv(1024)
+    if not data:
+        break;
+    print("Mesazhi i pranuar:", data.decode())
+
+# mbyllja e lidhjes
+conn.close()
