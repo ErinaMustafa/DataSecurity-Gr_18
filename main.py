@@ -31,7 +31,7 @@ while True:
 
 
     elif tipi == '2':
-        print("\n Veprim për fajll:")
+        print("\n Veprim për fajll: ")
         print("1. Enkripto")
         print("2. Dekripto")
 
@@ -49,7 +49,7 @@ while True:
         print(" Dalje nga programi.")
         break
     else:
-        print("Ju lutem zgjidhni 1, 2 ose 3.")
+        print("Ju lutem zgjidhni 1, 2 ose 3.\n")
         
         if veprimi == '1':
             plain_text = input("Shkruani tekstin për enkriptim: ")
