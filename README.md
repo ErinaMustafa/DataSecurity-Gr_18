@@ -11,7 +11,7 @@ Triple DES (3DES) është një variant i përmirësuar i algoritmit DES (Data En
 - Çelësi efektiv ka gjatësi 112 ose 168-bit.
 - Procesi përfshin: Enkriptim → Dekriptim → Enkriptim.
 
-##Permbajtja e projektit:
+## Permbajtja e projektit:
 
 - DekriptimiiFileve.py
 - dekriptimiTekstit.py
@@ -39,7 +39,7 @@ Ky projekt mbështet:
    ```bash
    pip install pycryptodome
 
-##Kontribuesit e projektit:
+## Kontribuesit e projektit:
 
 Erina Mustafa
 Erine Mujku
