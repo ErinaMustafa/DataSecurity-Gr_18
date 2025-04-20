@@ -37,6 +37,12 @@ while True:
 
         veprimi = input("Zgjedhja juaj: ")
 
+        if veprimi == '1':
+            enkripto()
+        elif veprimi == '2':
+            dekripto()
+        else:
+            print(" Zgjedhje e pavlefshme për fajll.")
 
 
     elif tipi == '3':
