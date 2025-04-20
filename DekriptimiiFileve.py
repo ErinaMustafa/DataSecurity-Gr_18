@@ -1,5 +1,6 @@
 from Crypto.Cipher import DES3
 import base64
+import os
 
 key = b'1234567890abcdef12345678'
 
