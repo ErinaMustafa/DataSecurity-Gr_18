@@ -1,28 +1,30 @@
 import socket
-#krijimi i nje serveri socket
-server_socket=socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-#konffigurimi i ip dhe port
-server_ip = "192.168.1.43"
-server_port = 12345
+def server_side_connection():
+    #krijimi i nje serveri socket
+    server_socket=socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-#lejimi i qasjes se klientit ne server 
-server_socket.bind((server_ip, server_port))
-server_socket.listen(1)
+    #konffigurimi i ip dhe port
+    server_ip = "192.168.1.43"
+    server_port = 12345
 
-#pritja e klientit per tu qasur
-print(f"Serveri duke pritur lidhje ne portin {server_port} ...")
+    #lejimi i qasjes se klientit ne server
+    server_socket.bind((server_ip, server_port))
+    server_socket.listen(1)
 
-# pranimi i qasjes se klientit
-conn, addr = server_socket.accept()
-print(f"Lidhur nga: {addr}")
+    #pritja e klientit per tu qasur
+    print(f"Serveri duke pritur lidhje ne portin {server_port} ...")
 
-# pranimi i mesazhit nga klienti
-while True:
-    data = conn.recv(1024)
-    if not data:
-        break;
-    print("Mesazhi i pranuar:", data.decode())
+    # pranimi i qasjes se klientit
+    conn, addr = server_socket.accept()
+    print(f"Lidhur nga: {addr}")
 
-# mbyllja e lidhjes
-conn.close()
+    # pranimi i mesazhit nga klienti
+    while True:
+        data = conn.recv(1024)
+        if not data:
+            break;
+        print("Mesazhi i pranuar:", data.decode())
+
+# # mbyllja e lidhjes
+# conn.close()
